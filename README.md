@@ -14,3 +14,5 @@ El Buen Sabor
 ## Project Description
 Recipe app for finding and collecting recipes.
 
+## Visuals
+<img src="assets/images/Halloween/pexels-daisy-anderson-5589854.jpg" alt="Halloween Recipes">
