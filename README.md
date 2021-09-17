@@ -15,4 +15,6 @@ El Buen Sabor
 Recipe app for finding and collecting recipes.
 
 ## Visuals
-<img src="assets/images/Halloween/pexels-daisy-anderson-5589854.jpg" alt="Halloween Recipes">
+<img src="assets/images/Site visuals/Screen Shot 2021-09-17 at 12.48.39 AM.png" alt="Site visuals">
+<img src="assets/images/Site visuals/Screen Shot 2021-09-17 at 3.10.36 AM.png" alt="Site visuals">
+<img src="assets/images/Site visuals/Screen Shot 2021-09-17 at 3.10.46 AM.png" alt="Site visuals">
