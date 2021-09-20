@@ -3,26 +3,126 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>El Buen Sabor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"/>
   </head>
   <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        El Bueno Sabor
-      </h1>
-      
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
-    </div>
-    <p>I love pizza!!!!!!</p></p>
-
+    <!--This is the Navbar-->
+    <section class="hero is-small is-warning">
+    <nav class="hero-body is-flex is-justify-content-space-between ">
+      <!-- Left side -->
+      <div class="level-left">
+        <div class="level-item column-gap">
+          <p class="title is-5 has-text-danger">El Buen Sabor </p></div>
+          <div class="level-item column">
+      <a class="button is-primary is-light ">
+        Home
+      </a>
+        </div>
+      </div>
+    
+      <!-- Right side -->
+      <div class="level-right">
+        <form><input class="input is-normal" type="text" placeholder="Look for recipe"/></form>
+        <a class="button is-primary is-light">
+          Go
+        </a>
+      </div>
+    </nav>
+    <h1 class="is-flex is-justify-content-center has-text-danger title is-1 pb-4">El Buen Sabor</h1>
   </section>
-  <div class="product-card"></div>
   
 
-  
+      <!--Card slider ends-->
+      <!--This is tiles section-->
+      <div class="tile pt-5">
+        <div class="tile is-ancestor">
+          <div class="tile is-vertical is-8">
+            <div class="tile">
+              <div class="tile is-parent is-vertical">
+                <article class="tile is-child notification has-background-warning-light">
+                  <p class="title">Recipes for Halloween</p>
+                  <p class="subtitle">Take a look at our cupcake recipes for trick or treat!</p>
+                  <figure class="image">
+                    <a><img src="assets/images/Halloween/pexels-daisy-anderson-5589854.jpg" alt="Halloween Recipes"></a>
+                  </figure>
+                  <div class="pt-4">
+                    <button class="button hero is-warning">See More</button>
+                    </div>
+                </article>
+                <article class="tile is-child notification has-background-warning-light">
+                  <p class="title">Recipes for Thanksgiving</p>
+                  <p class="subtitle">See the variety of turkey recipes for Thanksgiving!</p>
+                  <figure class="image">
+                    <a><img src="assets/images/Thanksgiving/pexels-askar-abayev-5638732.jpg" alt="Everyone is gathered for thanksgiving dinner"></a>
+                  </figure>
+                  <div class="pt-4">
+                  <button class="button hero is-warning">See More</button>
+                  </div>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child notification has-background-warning-light">
+                  <p class="title">New Recipes </p>
+                  <p class="subtitle">2021 Recipes</p>
+                  <figure class="image">
+                    <a><img src="assets/images/New list/pexels-karolina-grabowska-4033657.jpg" alt="New list of recipes 2021"></a>
+                    <p class="pt-3">Here are some recipes that will change your perspective in tasteHere are some recipes that will change your perspective in taste Here are some recipes that will change your perspective in taste Here are some recipes that will change your perspective in taste Here are some recipes that will change your perspective in taste Here are some recipes that will change your perspective in taste Here are some recipes that will change your perspective in taste Here are some recipes that will change your perspective in taste Here are some recipes that will change your perspective in taste Here are some recipes that will change your perspective in taste Here are some recipes that will change your perspective in taste Here are some recipes that will change your perspective in taste </p>
+                  </figure>
+                  <div class="pt-4">
+                  <button class="button hero is-warning">See More</button>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child notification has-background-warning-light">
+                <p class="title">Recipes for Christmas</p>
+                <p class="subtitle">Get ready for Christmas early by setting up new Christmas dinner meals!</p>
+                <figure class="image">
+                  <a><img src="assets/images/Christmas/pexels-tim-douglas-6210762.jpg" alt="Christmas Recipes"></a>
+                </figure>
+                <div class="pt-4">
+                  <button class="button hero is-warning">See More</button>
+                  </div>
+              </article>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child notification has-background-warning-light">
+              <div class="content">
+                <p class="title">Popular Recipes </p>
+                <p class="subtitle">Top 20 Recipes for this Halloween</p>
+                <p>Soups</p>
+                <figure class="image">
+                  <a><img src="assets/images/Halloween/pexels-karolina-grabowska-5706433.jpg" alt="Soup Recipes"></a>
+                </figure>
+                <p>Pies</p>
+                <figure class="image">
+                  <a><img src="assets/images/Halloween/pexels-pixabay-248469.jpg" alt="Pie Recipes"></a>
+                </figure>
+                <p>Pumpkin Spice</p>
+                <figure class="image">
+                  <a><img src="assets/images/Halloween/pexels-valeriia-miller-3146167.jpg" alt="Pumpikin Spice Recipes"></a>
+                </figure>
+                <button class="button hero is-warning">See More</button>
+                <div class="content">
+                  <!-- Content -->
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="box">
+        <h1 class="level-item">El Buen Sabor</h1>
+        <div class="content">
+          <p>
+            Made by ObeeK, SamsonGee, Alexzoo0, Lisarozo. <span class="level-right">Contact Us</span> <a class="level-right" href="fuzzywuzzies23@gmail.com">fuzzywuzzies23@gmail.com</a>
+          </p>
+          </div>
+      </footer>
+      <script src="/assets/js/script.js"></script>
   </body>
 </html>
