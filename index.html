@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,8 +24,8 @@
     
       <!-- Right side -->
       <div class="level-right">
-        <form><input class="input is-normal" type="text" placeholder="Look for recipe"/></form>
-        <a class="button is-primary is-light">
+        <form><input class="input is-normal" id="recipeSearch" type="search" placeholder="Look for recipe"/></form>
+        <a class="button is-primary is-light" id="searchButton">
           Go
         </a>
       </div>
@@ -114,6 +115,13 @@
           </div>
         </div>
       </div>
+
+      <section id="nutrition" class="">
+        <div class="calories nutriTable"></div>
+        <div class="carbs nutriTable"></div>
+        <div class="cholesterol nutriTable"></div>
+        <div class="sugar nutriTable"></div>
+      </section>
       <footer class="footer">
         <div class="box">
         <h1 class="level-item">El Buen Sabor</h1>
@@ -123,6 +131,6 @@
           </p>
           </div>
       </footer>
-      <script src="/assets/js/script.js"></script>
+      <script src="./assets/js/script.js"></script>
   </body>
 </html>
