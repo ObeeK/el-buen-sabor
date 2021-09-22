@@ -32,6 +32,8 @@ fetch(apiUrl)
     })
     .then(function(data) {
         var measuredIngredients = []
+        // if statement for meals to be defined
+        //if else if no meals came back
         for (var i = 1; i < 20; i++) {
             var ingredientList = "strIngredient" + i 
             var measurementList = "strMeasure" + i
@@ -62,9 +64,12 @@ fetch(apiUrl)
             
             // Title & Instructions
             
+            var titleData = data.meals[0]["strMeal"]
             var ingTitleEl = document.querySelector("#recipe-title")
-            //.appendChild()
-
+            ingTitleEl.innerHTML=titleData
+            var recipeInstruction = data.meals[0]["strInstructions"]
+            var instructionEl = document.querySelector("#instructions")
+            instructionEl.innerHTML = recipeInstruction
             console.log(data);
 
         }
