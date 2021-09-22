@@ -47,6 +47,14 @@ fetch(apiUrl)
                 // console.log(totalIngredient)
 
                 // create li element with each ingredient
+                currentIngredient = document.createElement("li");
+
+                currentIngredient.innerHTML=totalIngredient
+
+                var ingT = document.querySelector("#ingList")
+
+                ingT.appendChild(currentIngredient);
+
                 measuredIngredients.push(totalIngredient);
                 // console.log(measuredIngredients);
                 
