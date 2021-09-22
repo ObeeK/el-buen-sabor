@@ -71,11 +71,15 @@ fetch(apiUrl)
             var instructionEl = document.querySelector("#instructions")
             instructionEl.innerHTML = recipeInstruction
             console.log(data);
-            // image
-            var thumbnail = data.meal[0]["strMealThumb"]
+            // image, this code produces an image- however the image is repeated several times?
+            var thumbnail = document.createElement("img")
+            thumbnail.src = data.meals[0]["strMealThumb"]
             var imageEL = document.querySelector("#image-container")
-            
+
+            imageEL.appendChild(thumbnail)
+
             //nutr info 
+            
             //local storage savings
 
         }   
