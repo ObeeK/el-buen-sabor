@@ -47,6 +47,7 @@ fetch(apiUrl)
                 // console.log(totalIngredient)
 
                 // create li element with each ingredient
+                
                 measuredIngredients.push(totalIngredient);
                 // console.log(measuredIngredients);
                 
