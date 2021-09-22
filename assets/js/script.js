@@ -71,8 +71,14 @@ fetch(apiUrl)
             var instructionEl = document.querySelector("#instructions")
             instructionEl.innerHTML = recipeInstruction
             console.log(data);
+            // image
+            var thumbnail = data.meal[0]["strMealThumb"]
+            var imageEL = document.querySelector("#image-container")
+            
+            //nutr info 
+            //local storage savings
 
-        }
+        }   
         
         // console.log(measuredIngredients)
         nutrition(measuredIngredients)
@@ -111,5 +117,4 @@ fetch(apiUrl)
         
     }
 
-
-
+    // load recipies function
