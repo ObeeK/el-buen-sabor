@@ -35,6 +35,11 @@ fetch(apiUrl)
         var measuredIngredients = []
         // if statement for meals to be defined
         //if else if no meals came back
+        var thumbnail = document.createElement("img")
+            thumbnail.src = data.meals[0]["strMealThumb"]
+            var imageEL = document.querySelector("#image-container")
+        
+            imageEL.appendChild(thumbnail)
         for (var i = 1; i < 20; i++) {
             var ingredientList = "strIngredient" + i 
             var measurementList = "strMeasure" + i
@@ -73,12 +78,8 @@ fetch(apiUrl)
             instructionEl.innerHTML = recipeInstruction
             console.log(data);
             // image, this code produces an image- however the image is repeated several times?
-        
-            var thumbnail = document.createElement("img")
-            thumbnail.src = data.meals[0]["strMealThumb"]
-            var imageEL = document.querySelector("#image-container")
-        
-            // imageEL.appendChild(thumbnail)
+            // fixed the above by moving it out of the for loop
+            
     
             //nutr info 
             
