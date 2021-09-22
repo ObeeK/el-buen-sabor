@@ -2,18 +2,17 @@ var apiUrl = "https://www.themealdb.com/api/json/v1/1/random.php"
 
 var nutritionUrl = "https://api.edamam.com/api/nutrition-details?app_id=e23b29e2&app_key=e8c537ddb283dff1d3f1c7b8621f15e0"
 var recipeSearchEl = document.querySelector("#recipeSearch")
-var searchButtonEl = document.querySelector("#searchButton")
+var yesButtonEl = document.querySelector("#yesButton")
 var searchTerm = recipeSearchEl.value
-var searchApiUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`
 
-    //event listener for search button
+    //event listener for yes button button
     var searchFunction = function() {
-        searchButtonEl.addEventListener("click", function(event) {
-    })}
+        yesButtonEl.addEventListener("click", function(event) {
+   
+        }
+    )}
 
-// this will be a function called when the search button is clicked
 
-// make it choose the first index in the array of results
 
 // OR ************
 // just have a question & button asking if they feel like cooking today
@@ -61,7 +60,7 @@ fetch(apiUrl)
                 // console.log(measuredIngredients);
                 
             }
-            
+        
             // Title & Instructions
             
             var titleData = data.meals[0]["strMeal"]
@@ -72,21 +71,22 @@ fetch(apiUrl)
             instructionEl.innerHTML = recipeInstruction
             console.log(data);
             // image, this code produces an image- however the image is repeated several times?
+        
             var thumbnail = document.createElement("img")
             thumbnail.src = data.meals[0]["strMealThumb"]
             var imageEL = document.querySelector("#image-container")
-
-            imageEL.appendChild(thumbnail)
-
+        
+            // imageEL.appendChild(thumbnail)
+    
             //nutr info 
             
             //local storage savings
-
-        }   
+        }
+           
         
         // console.log(measuredIngredients)
         nutrition(measuredIngredients)
-    })
+    });
     
 
     var nutrition = function(measuredIngredients) {
@@ -111,6 +111,13 @@ fetch(apiUrl)
             if(data.error) {
                 // later on - have a modal or change the nutrition div to display error
                 console.log("Nutrition information is not available")
+                return
+            }
+            else{
+                // adding nutrition info
+                var cals = data.calories
+                var caloriesEl = document.querySelector(".calories")
+                caloriesEl.innerHTML = cals
             }
 
                 // add data.calories value to div
@@ -118,6 +125,8 @@ fetch(apiUrl)
                 // divide each value by the value of yield
             console.log({data})
         })
+
+       
         
     }
 
