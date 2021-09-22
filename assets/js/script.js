@@ -109,15 +109,31 @@ fetch(apiUrl)
         })
         .then(function(data){
             if(data.error) {
-                // later on - have a modal or change the nutrition div to display error
+                // Error Handling
                 console.log("Nutrition information is not available")
+                var errorEl = document.querySelector("#nutriError")
+                errorEl.classList.remove("hidden")
                 return
             }
             else{
                 // adding nutrition info
-                var cals = data.calories
+                var cals = Math.ceil(data.calories)
+                var fat = Math.ceil(data.totalNutrients.FAT.quantity) + data.totalNutrients.FAT.unit
+                var carbs = Math.ceil(data.totalNutrients.CHOCDF.quantity) + data.totalNutrients.CHOCDF.unit
+                var cholest = Math.ceil(data.totalNutrients.CHOLE.quantity) + data.totalNutrients.CHOLE.unit
+                var sugar = Math.ceil(data.totalNutrients.SUGAR.quantity) + data.totalNutrients.SUGAR.unit
+
                 var caloriesEl = document.querySelector(".calories")
-                caloriesEl.innerHTML = cals
+                var fatEl = document.querySelector(".fat")
+                var carbsEl = document.querySelector(".carbs")
+                var cholestEl = document.querySelector(".cholesterol")
+                var sugarEl = document.querySelector(".sugar")
+
+                caloriesEl.innerHTML = "Calories: " + cals
+                fatEl.innerHTML = "Fat: " + fat
+                carbsEl.innerHTML = "Carbs: " + carbs
+                cholestEl.innerHTML = "Cholesterol: " + cholest
+                sugarEl.innerHTML = "Sugar: " + sugar
             }
 
                 // add data.calories value to div

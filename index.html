@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>El Buen Sabor</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
     <!--This is the Navbar-->
@@ -122,11 +123,18 @@
         </div>
       </div>
 
+      <section id="nutriError" class="hidden">
+        <div id="errorMessage">Nutrition information is unavailable for this recipe.
+          Refresh and try again!
+        </div>
+      </section>
       <section id="nutrition" class="">
+        <h3 class="nutriHeader nutriTable">Total nutrition info for the entire dish:</h3>
         <div class="calories nutriTable"></div>
         <div class="carbs nutriTable"></div>
         <div class="cholesterol nutriTable"></div>
         <div class="sugar nutriTable"></div>
+        <div class="fat nutriTable"></div>
       </section>
       <footer class="footer">
         <div class="box">
