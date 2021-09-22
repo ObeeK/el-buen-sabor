@@ -1,16 +1,18 @@
 var apiUrl = "https://www.themealdb.com/api/json/v1/1/random.php"
 
 var nutritionUrl = "https://api.edamam.com/api/nutrition-details?app_id=e23b29e2&app_key=e8c537ddb283dff1d3f1c7b8621f15e0"
-var recipeSearchEl = document.querySelector("#recipeSearch")
-var yesButtonEl = document.querySelector("#yesButton")
-var searchTerm = recipeSearchEl.value
-
+var yesButtonEl = document.querySelector("#btnYes")
+var recipeEl = document.querySelector("#recipeContainer")
+var nutriEl = document.querySelector("#nutrition")
     //event listener for yes button button
-    var searchFunction = function() {
         yesButtonEl.addEventListener("click", function(event) {
-   
+            event.preventDefault()
+            yesButtonEl.classList.add('hidden')
+            recipeEl.classList.remove('hidden')
+            nutriEl.classList.remove('hidden')
+
         }
-    )}
+    );
 
 
 
