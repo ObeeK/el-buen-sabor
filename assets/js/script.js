@@ -60,7 +60,10 @@ fetch(apiUrl)
                 
             }
             
+            // Title & Instructions
             
+            var ingTitleEl = document.querySelector("#recipe-title")
+            //.appendChild()
 
             console.log(data);
 
