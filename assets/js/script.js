@@ -76,7 +76,7 @@ fetch(apiUrl)
             thumbnail.src = data.meals[0]["strMealThumb"]
             var imageEL = document.querySelector("#image-container")
         
-            // imageEL.appendChild(thumbnail)
+             imageEL.appendChild(thumbnail)
     
             //nutr info 
             
