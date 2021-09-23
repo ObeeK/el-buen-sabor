@@ -1,20 +1,34 @@
-<<<<<<< HEAD
-=======
 var apiUrl = "https://www.themealdb.com/api/json/v1/1/random.php"
 
 var nutritionUrl = "https://api.edamam.com/api/nutrition-details?app_id=e23b29e2&app_key=e8c537ddb283dff1d3f1c7b8621f15e0"
-var yesButtonEl = document.querySelector("#btnYes")
+var yesButtonEl = document.querySelector("#btn1")
+var noButtonEl = document.querySelector("#btn2")
 var recipeEl = document.querySelector("#recipeContainer")
 var nutriEl = document.querySelector("#nutrition")
+var question= document.querySelector("#question")
     //event listener for yes button button
         yesButtonEl.addEventListener("click", function(event) {
             event.preventDefault()
             yesButtonEl.classList.add('hidden')
+            noButtonEl.classList.add('hidden')
+            question.classList.add('hidden')
             recipeEl.classList.remove('hidden')
             nutriEl.classList.remove('hidden')
 
+            // qContainer = classList.add('hidden')
+           
+
         }
     );
+
+    noButtonEl.addEventListener("click", function(event) {
+        event.preventDefault()
+        var kitchen = document.querySelector("#kitchen")
+        kitchen.classList.remove("hidden")
+        
+
+    }
+);
 
 
 
@@ -128,17 +142,17 @@ fetch(apiUrl)
                 var cholest = Math.ceil(data.totalNutrients.CHOLE.quantity) + data.totalNutrients.CHOLE.unit
                 var sugar = Math.ceil(data.totalNutrients.SUGAR.quantity) + data.totalNutrients.SUGAR.unit
 
-                var caloriesEl = document.querySelector(".calories")
-                var fatEl = document.querySelector(".fat")
-                var carbsEl = document.querySelector(".carbs")
-                var cholestEl = document.querySelector(".cholesterol")
-                var sugarEl = document.querySelector(".sugar")
+                var caloriesEl = document.querySelector("#calories")
+                var fatEl = document.querySelector("#fat")
+                var carbsEl = document.querySelector("#carbs")
+                var cholestEl = document.querySelector("#cholesterol")
+                var sugarEl = document.querySelector("#sugar")
 
-                caloriesEl.innerHTML = "Calories: " + cals
-                fatEl.innerHTML = "Fat: " + fat
-                carbsEl.innerHTML = "Carbs: " + carbs
-                cholestEl.innerHTML = "Cholesterol: " + cholest
-                sugarEl.innerHTML = "Sugar: " + sugar
+                caloriesEl.innerHTML = cals
+                fatEl.innerHTML = fat
+                carbsEl.innerHTML = carbs
+                cholestEl.innerHTML = cholest
+                sugarEl.innerHTML = sugar
             }
 
                 // add data.calories value to div
@@ -150,11 +164,3 @@ fetch(apiUrl)
        
         
     }
-
-<<<<<<< HEAD
-    // load recipies function
-=======
-
-
->>>>>>> de8e2b0fe27040299025f54c760462539dffc65a
->>>>>>> 2e2cb1fb45b1ccc44884dddc7fdfba7b2826ed4a

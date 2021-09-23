@@ -6,6 +6,7 @@
     <title>El Buen Sabor</title>
     <link rel="stylesheet" href="assets/css/materialize/css/materialize.css" media="screen,projection"/>
     <link rel="stylesheet" href="assets/css/style2.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
   </head>
   <body>
     <!--This is the Navbar-->
@@ -19,22 +20,27 @@
     </nav>
   </section>
 <!--Hidden Box-->
-  <section id="qContainer">
-      <h3> Do you feel like cooking today? </h3>
+  <div id="qContainer" class="center-align">
+      <h3 id="question"> Do you feel like cooking today? </h3>
         <button id="btn1" class="waves-effect waves-light btn orange accent-4">Yes</button>
         <button id="btn2" class="waves-effect waves-light btn orange accent-4">No</button>
-    </section>
+        <p id="kitchen" class="hidden">If you can't take the heat get out of the kitchen!</p>
+
+  </div>
 <section id="recipeContainer" class="hidden">
 <h2 id="recipe-title"></h2>
 <ul id="ingList"> </ul>
 <p id="instructions"></p>
+<div id="image-container"></div>
 </section>
+
+<section class="noResponse hidden">
   
 <section id="nutrition-info" class="table">
 <table class="centered striped">
   <thead>
    <tr id="t-head">
-       <th>Nutrient</th>
+       <th>Total Nutrients for Dish</th>
        <th>Value</th>
     </tr>
   </thead>
@@ -44,20 +50,20 @@
       <td id="calories"></td>
     </tr>
     <tr id="row-2">
-      <td>two</td>
-      <td>row</td>
+      <td>Fat</td>
+      <td id="fat">row</td>
     </tr>
     <tr id="row-3">
-      <td>three</td>
-      <td>three</td>
+      <td>Carbs</td>
+      <td id="carbs">three</td>
     </tr>
     <tr id="row-4">
-      <td>four</td>
-      <td>row</td>
+      <td>Cholesterol</td>
+      <td id="cholesterol">row</td>
     </tr>
     <tr id="row-5">
-      <td>five</td>
-      <td>row</td>
+      <td>Sugar</td>
+      <td id="sugar">row</td>
     </tr>
     </tbody>
   </table>

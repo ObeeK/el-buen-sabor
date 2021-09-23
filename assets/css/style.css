@@ -9,3 +9,8 @@
 .nutriHeader {
     font-weight: bolder;
 }
+
+.qContainer {
+    border: 2px solid black;
+    
+}
