@@ -20,7 +20,6 @@ var linkColumnEl = document.querySelector("#linkColumn")
             recipeEl.classList.remove('hidden')
             nutriEl.classList.remove('hidden')
             saveButtonEl.classList.remove('hidden')
-            linkColumnEl.classList.add('clickedColumn')
             kitchen.innerHTML=""
             
             // qContainer = classList.add('hidden')
