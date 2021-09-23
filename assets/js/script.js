@@ -1,21 +1,39 @@
-<<<<<<< HEAD
-=======
 var apiUrl = "https://www.themealdb.com/api/json/v1/1/random.php"
 
 var nutritionUrl = "https://api.edamam.com/api/nutrition-details?app_id=e23b29e2&app_key=e8c537ddb283dff1d3f1c7b8621f15e0"
-var recipeSearchEl = document.querySelector("#recipeSearch")
-var searchButtonEl = document.querySelector("#searchButton")
-var searchTerm = recipeSearchEl.value
-var searchApiUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`
+var yesButtonEl = document.querySelector("#btn1")
+var noButtonEl = document.querySelector("#btn2")
+var recipeEl = document.querySelector("#recipeContainer")
+var nutriEl = document.querySelector("#nutrition-info")
+var question= document.querySelector("#question")
+var saveBtn = document.querySelector("#save")
+    //event listener for yes button button
+        yesButtonEl.addEventListener("click", function(event) {
+            event.preventDefault()
+            yesButtonEl.classList.add('hidden')
+            noButtonEl.classList.add('hidden')
+            question.classList.add('hidden')
+            recipeEl.classList.remove('hidden')
+            nutriEl.classList.remove('hidden')
+            kitchen.innerHTML=""
+            // qContainer = classList.add('hidden')
+           
 
-    //event listener for search button
-    var searchFunction = function() {
-        searchButtonEl.addEventListener("click", function(event) {
-    })}
+        }
+    );
 
-// this will be a function called when the search button is clicked
+    noButtonEl.addEventListener("click", function(event) {
+        event.preventDefault()
+        var kitchen = document.querySelector("#kitchen")
+        kitchen.classList.remove("hidden")
+        
 
-// make it choose the first index in the array of results
+    }
+);
+
+saveBtn.addEventListener("click", function(saveLink) {
+
+})
 
 // OR ************
 // just have a question & button asking if they feel like cooking today
@@ -36,6 +54,11 @@ fetch(apiUrl)
         var measuredIngredients = []
         // if statement for meals to be defined
         //if else if no meals came back
+        var thumbnail = document.createElement("img")
+            thumbnail.src = data.meals[0]["strMealThumb"]
+            var imageEL = document.querySelector("#image-container")
+            var recipeLink = meals[0].strSource
+            imageEL.appendChild(thumbnail)
         for (var i = 1; i < 20; i++) {
             var ingredientList = "strIngredient" + i 
             var measurementList = "strMeasure" + i
@@ -63,7 +86,7 @@ fetch(apiUrl)
                 // console.log(measuredIngredients);
                 
             }
-            
+        
             // Title & Instructions
             
             var titleData = data.meals[0]["strMeal"]
@@ -73,13 +96,28 @@ fetch(apiUrl)
             var instructionEl = document.querySelector("#instructions")
             instructionEl.innerHTML = recipeInstruction
             console.log(data);
-
+            // image, this code produces an image- however the image is repeated several times?
+            // fixed the above by moving it out of the for loop
+            
+    
+            //nutr info 
+            
+            
         }
+        
         
         // console.log(measuredIngredients)
         nutrition(measuredIngredients)
-    })
+        
+    });
     
+// saving to local storage 
+
+var saveLink = function() {
+    localStorage.setItem('link', JSON.stringify(recipeLink))
+    console.log("testing")
+  };
+
 
     var nutrition = function(measuredIngredients) {
         // console.log({measuredIngredients});
@@ -101,8 +139,31 @@ fetch(apiUrl)
         })
         .then(function(data){
             if(data.error) {
-                // later on - have a modal or change the nutrition div to display error
+                // Error Handling
                 console.log("Nutrition information is not available")
+                var errorEl = document.querySelector("#nutriError")
+                errorEl.classList.remove("hidden")
+                return
+            }
+            else{
+                // adding nutrition info
+                var cals = Math.ceil(data.calories)
+                var fat = Math.ceil(data.totalNutrients.FAT.quantity) + data.totalNutrients.FAT.unit
+                var carbs = Math.ceil(data.totalNutrients.CHOCDF.quantity) + data.totalNutrients.CHOCDF.unit
+                var cholest = Math.ceil(data.totalNutrients.CHOLE.quantity) + data.totalNutrients.CHOLE.unit
+                var sugar = Math.ceil(data.totalNutrients.SUGAR.quantity) + data.totalNutrients.SUGAR.unit
+
+                var caloriesEl = document.querySelector("#calories")
+                var fatEl = document.querySelector("#fat")
+                var carbsEl = document.querySelector("#carbs")
+                var cholestEl = document.querySelector("#cholesterol")
+                var sugarEl = document.querySelector("#sugar")
+
+                caloriesEl.innerHTML = cals
+                fatEl.innerHTML = fat
+                carbsEl.innerHTML = carbs
+                cholestEl.innerHTML = cholest
+                sugarEl.innerHTML = sugar
             }
 
                 // add data.calories value to div
@@ -110,9 +171,7 @@ fetch(apiUrl)
                 // divide each value by the value of yield
             console.log({data})
         })
+
+       
         
     }
-
-
-
->>>>>>> de8e2b0fe27040299025f54c760462539dffc65a

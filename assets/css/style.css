@@ -1,0 +1,16 @@
+.hidden {
+    display: none
+}
+
+.nutriTable {
+    border: 1px solid black;
+}
+
+.nutriHeader {
+    font-weight: bolder;
+}
+
+.qContainer {
+    border: 2px solid black;
+    
+}
