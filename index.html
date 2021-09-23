@@ -61,28 +61,66 @@
 </div>
 
 <div class="container">
-  <section id="saveButtonLink">
+  <div class="row">
+    <div id="nutrition-info" class="col s6 hidden">
+      <table class="striped">
+        <thead>
+          <tr id="t-head">
+            <th>Total Nutrients for Dish</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="row-1">
+            <td>Calories</td>
+            <td id="calories">Not Available</td>
+          </tr>
+          <tr id="row-2">
+            <td>Fat</td>
+            <td id="fat">Not Available</td>
+          </tr>
+          <tr id="row-3">
+            <td>Carbs</td>
+            <td id="carbs">Not Available</td>
+          </tr>
+          <tr id="row-4">
+            <td>Cholesterol</td>
+            <td id="cholesterol">Not Available</td>
+          </tr>
+          <tr id="row-5">
+            <td>Sugar</td>
+            <td id="sugar">Not Available</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col s6">
     <div class="row">
-      <div id="saveButton1" class="col s4 hidden">
-        <button id="save" class="waves-effect waves-light btn orange accent-4">Save Link to Recipe</button>
-      </div>
-      <div class="col s8"> Previously saved recipe:
+      <section id="saveButtonLink">
+        <div id="saveButton1" class="hidden">
+          <button id="save" class="waves-effect waves-light btn orange accent-4">Save Link to Recipe</button>
+        </div>
+        </section>
+    </div>
+    <div class="row">
+      <div class=""> Previously saved recipe:
         <div class="saved-recipes" id="saved-link"></div>
       </div>
     </div>
-  </section>
+    </div></div></div>
+  </section> 
 </div>
 
   <section id="link" class="hidden"></section>
 
   <section id="nutrition-info" class="noResponse hidden">
 
-<div class="container">
+<!-- <div class="container">
     <section class="table">
       <div class="row">
         <div class="col s2"></div>
-        <div class="col s8">
-          <table class="striped">
+        <div class="col s8"> -->
+          <!-- <table class="striped">
             <thead>
               <tr id="t-head">
                 <th>Total Nutrients for Dish</th>
@@ -111,13 +149,13 @@
                 <td id="sugar">Not Available</td>
               </tr>
             </tbody>
-          </table>
-        </div>
+          </table> -->
+        <!-- </div>
         <div class="col s2"></div>
       </div>
     </section>
   </section>
-</div>
+</div> -->
   <!--Image Cards
   <div class="row">
     <div class="col s12 m7">
