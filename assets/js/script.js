@@ -5,10 +5,11 @@ var yesButtonEl = document.querySelector("#btn1")
 var noButtonEl = document.querySelector("#btn2")
 var recipeEl = document.querySelector("#recipeContainer")
 var nutriEl = document.querySelector("#nutrition-info")
-var question= document.querySelector("#question")
+var question= document.querySelector("#qContainer")
 var saveBtn = document.querySelector("#save")
 var linkEl = document.querySelector("#link")
 var savedEl = document.querySelector("#saved-link")
+var saveButtonEl = document.querySelector("#saveButton1")
     //event listener for yes button button
         yesButtonEl.addEventListener("click", function(event) {
             event.preventDefault()
@@ -17,6 +18,7 @@ var savedEl = document.querySelector("#saved-link")
             question.classList.add('hidden')
             recipeEl.classList.remove('hidden')
             nutriEl.classList.remove('hidden')
+            saveButtonEl.classList.remove('hidden')
             kitchen.innerHTML=""
             
             // qContainer = classList.add('hidden')
