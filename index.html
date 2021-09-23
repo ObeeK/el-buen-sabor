@@ -1,112 +1,123 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>El Buen Sabor</title>
-    <link rel="stylesheet" href="assets/css/materialize/css/materialize.css" media="screen,projection"/>
-    <link rel="stylesheet" href="assets/css/style2.css"/>
-    <link rel="stylesheet" href="./assets/css/style.css"/>
-  </head>
-  <body>
-    <!--This is the Navbar-->
-    <section class="navbar-fixed">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El Buen Sabor</title>
+  <link rel="stylesheet" href="assets/css/materialize/css/materialize.css" media="screen,projection" />
+  <link rel="stylesheet" href="assets/css/style2.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <!--This is the Navbar-->
+  <section class="navbar-fixed">
     <nav class="hero-body is-flex is-justify-content-space-between change">
       <!-- Left side -->
       <div class="level-left">
         <div class="level-item column-gap col s12 m2">
           <h1 class="fancy z-depth-4">El Buen Sabor </h1>
-          </div>
+        </div>
     </nav>
   </section>
-<!--Hidden Box-->
-<div class="row questionRow">
-  <div class="col s2">
-  </div>
-  <div id="qContainer" class="center-align col s8">
+  <!--Hidden Box-->
+  <div class="container">
+  <div class="row questionRow">
+    <div class="col s2">
+    </div>
+    <div id="qContainer" class="center-align col s8">
       <h3 id="question"> Do you feel like cooking today? </h3>
-        <button id="btn1" class="waves-effect waves-light btn orange accent-4">Yes</button>
-        <button id="btn2" class="waves-effect waves-light btn orange accent-4">No</button>
-        <p id="kitchen" class="hidden">If you can't take the heat get out of the kitchen!</p>
+      <button id="btn1" class="waves-effect waves-light btn orange accent-4">Yes</button>
+      <button id="btn2" class="waves-effect waves-light btn orange accent-4">No</button>
+      <p id="kitchen" class="hidden">If you can't take the heat get out of the kitchen!</p>
+    </div>
+    <div class="col s2">
+    </div>
+  </div>
+  </div>
+
+
+  <div class="container">
+  <section id="recipeContainer" class="hidden">
+    <div class="row">
+      <div class="col s6">
+        <div id="image-container"></div>
       </div>
-      <div class="col s2">
+      <h2 class="col s4" id="recipe-title"></h2>
+      <div class="row">
+        <div class="col s6">
+          <h5>What You'll Need:</h3>
+            <ul id="ingList"> </ul>
+        </div>
+        <!-- <div class="col s1"></div> -->
+        <div class="col s12">
+          <p id="instructions"></p>
+        </div>
+        <!-- <div class="col s1"></div> -->
       </div>
+    </div>
+  </section>
 </div>
 
+<div class="container">
+  <section id="saveButtonLink">
+    <div class="row">
+      <div id="saveButton1" class="col s4 hidden">
+        <button id="save" class="waves-effect waves-light btn orange accent-4">Save Link to Recipe</button>
+      </div>
+      <div class="col s8"> Previously saved recipe:
+        <div class="saved-recipes" id="saved-link"></div>
+      </div>
+    </div>
+  </section>
+</div>
 
-      <section id="recipeContainer" class="hidden">
-        <div class="row">
-          <div class="col s6">
-            <div id="image-container"></div>
-          </div>
-          <h2 class="col s6" id="recipe-title"></h2>
-          <div class="row">
-            <div class="col s4">
-              <h5>What You'll Need:</h3>
-            <ul id="ingList"> </ul>
-            </div>
-            <div class="col s12">
-              <p id="instructions"></p>
-            </div>
-          </div>
+  <section id="link" class="hidden"></section>
+
+  <section id="nutrition-info" class="noResponse hidden">
+
+<div class="container">
+    <section class="table">
+      <div class="row">
+        <div class="col s2"></div>
+        <div class="col s8">
+          <table class="striped">
+            <thead>
+              <tr id="t-head">
+                <th>Total Nutrients for Dish</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="row-1">
+                <td>Calories</td>
+                <td id="calories">Not Available</td>
+              </tr>
+              <tr id="row-2">
+                <td>Fat</td>
+                <td id="fat">Not Available</td>
+              </tr>
+              <tr id="row-3">
+                <td>Carbs</td>
+                <td id="carbs">Not Available</td>
+              </tr>
+              <tr id="row-4">
+                <td>Cholesterol</td>
+                <td id="cholesterol">Not Available</td>
+              </tr>
+              <tr id="row-5">
+                <td>Sugar</td>
+                <td id="sugar">Not Available</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        </section>
-
-        <section id="saveButtonLink">
-          <div class="row">
-            <div id="saveButton1" class="col s4 hidden">
-              <button id="save" class = "waves-effect waves-light btn orange accent-4">Save Link to Recipe</button>
-            </div>
-            <div class="col s8"> Previously saved recipe:
-              <div class="saved-recipes" id="saved-link"></div>
-            </div>
-          </div>
-        </section>
-
-<section id="link" class="hidden"></section>
-
-<section id="nutrition-info" class="noResponse hidden">
-
-  
-<section class="table">
-  <div class="row">
-    <div class="col s2"></div>
-    <div class="col s8">
-<table class="striped">
-  <thead>
-   <tr id="t-head">
-       <th>Total Nutrients for Dish</th>
-       <th>Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr id="row-1">
-      <td>Calories</td>
-      <td id="calories">Not Available</td>
-    </tr>
-    <tr id="row-2">
-      <td>Fat</td>
-      <td id="fat">Not Available</td>
-    </tr>
-    <tr id="row-3">
-      <td>Carbs</td>
-      <td id="carbs">Not Available</td>
-    </tr>
-    <tr id="row-4">
-      <td>Cholesterol</td>
-      <td id="cholesterol">Not Available</td>
-    </tr>
-    <tr id="row-5">
-      <td>Sugar</td>
-      <td id="sugar">Not Available</td>
-    </tr>
-    </tbody>
-  </table>
-  </div>
-  <div class="col s2"></div>
-  </div>
+        <div class="col s2"></div>
+      </div>
+    </section>
   </section>
-  </section>
+</div>
   <!--Image Cards
   <div class="row">
     <div class="col s12 m7">
@@ -124,37 +135,38 @@
       </div>
     </div>
   </div> -->
-  
-  <section id="savedRecipes">
-  <div class="row">
-  
-  </div>
 
-</section>
-      <footer class="page-footer z-depth-4">
-        <div class="container left-align">
-          <div class="row">
-            <div class="col 16 s12">
-               <h5 class="fancy">El Buen Sabor</h5>
-                <p class="grey-text text-lighten-4">
-                  Made by ObeeK, SamsonGee, Alexzoo0, Lisarozo, and Sethhixon92
-                </p> 
-             </div>
-             <div class="col 14 offset-12 s12">
-               <h5 class="white-text fancy">Contact Us</h5>
-               <ul class="level-left">
-                <li><a class="level-right" href="fuzzywuzzies23@gmail.com">fuzzywuzzies23@gmail.com</a></li>
-               </ul>
-             </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-              © 2021 Fuzzy Wuzzies Inc.
-            </div>
-          </div>
-      </footer>
-      <script src="./assets/js/script.js"></script>
-      <!-- <script src="assets/js/script2.js"></script> -->
-  </body>
-</html> 
+  <section id="savedRecipes">
+    <div class="row">
+
+    </div>
+
+  </section>
+  <footer class="page-footer z-depth-4">
+    <div class="container left-align">
+      <div class="row">
+        <div class="col 16 s12">
+          <h5 class="fancy">El Buen Sabor</h5>
+          <p class="grey-text text-lighten-4">
+            Made by ObeeK, SamsonGee, Alexzoo0, Lisarozo, and Sethhixon92
+          </p>
+        </div>
+        <div class="col 14 offset-12 s12">
+          <h5 class="white-text fancy">Contact Us</h5>
+          <ul class="level-left">
+            <li><a class="level-right" href="fuzzywuzzies23@gmail.com">fuzzywuzzies23@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2021 Fuzzy Wuzzies Inc.
+      </div>
+    </div>
+  </footer>
+  <script src="./assets/js/script.js"></script>
+  <!-- <script src="assets/js/script2.js"></script> -->
+</body>
+
+</html>
