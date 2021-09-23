@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 var apiUrl = "https://www.themealdb.com/api/json/v1/1/random.php"
 
 var nutritionUrl = "https://api.edamam.com/api/nutrition-details?app_id=e23b29e2&app_key=e8c537ddb283dff1d3f1c7b8621f15e0"
@@ -149,4 +151,10 @@ fetch(apiUrl)
         
     }
 
+<<<<<<< HEAD
     // load recipies function
+=======
+
+
+>>>>>>> de8e2b0fe27040299025f54c760462539dffc65a
+>>>>>>> 2e2cb1fb45b1ccc44884dddc7fdfba7b2826ed4a

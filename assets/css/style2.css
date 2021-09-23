@@ -1,0 +1,20 @@
+.fancy {
+    font-family: "Lucida Handwriting";
+    font-size: 30px;
+}
+.hidden {
+    display: none;
+}
+.change {
+    color: whitesmoke;
+}
+.table {
+    box-sizing: border-box;
+    border: solid black 3px;
+}
+.flex {
+    align-items: left;
+}
+.tacos {
+    color: black;
+}
