@@ -1,16 +1,18 @@
 var apiUrl = "https://www.themealdb.com/api/json/v1/1/random.php"
 
 var nutritionUrl = "https://api.edamam.com/api/nutrition-details?app_id=e23b29e2&app_key=e8c537ddb283dff1d3f1c7b8621f15e0"
-var recipeSearchEl = document.querySelector("#recipeSearch")
-var yesButtonEl = document.querySelector("#yesButton")
-var searchTerm = recipeSearchEl.value
-
+var yesButtonEl = document.querySelector("#btnYes")
+var recipeEl = document.querySelector("#recipeContainer")
+var nutriEl = document.querySelector("#nutrition")
     //event listener for yes button button
-    var searchFunction = function() {
         yesButtonEl.addEventListener("click", function(event) {
-   
+            event.preventDefault()
+            yesButtonEl.classList.add('hidden')
+            recipeEl.classList.remove('hidden')
+            nutriEl.classList.remove('hidden')
+
         }
-    )}
+    );
 
 
 
@@ -33,6 +35,11 @@ fetch(apiUrl)
         var measuredIngredients = []
         // if statement for meals to be defined
         //if else if no meals came back
+        var thumbnail = document.createElement("img")
+            thumbnail.src = data.meals[0]["strMealThumb"]
+            var imageEL = document.querySelector("#image-container")
+        
+            imageEL.appendChild(thumbnail)
         for (var i = 1; i < 20; i++) {
             var ingredientList = "strIngredient" + i 
             var measurementList = "strMeasure" + i
@@ -71,12 +78,17 @@ fetch(apiUrl)
             instructionEl.innerHTML = recipeInstruction
             console.log(data);
             // image, this code produces an image- however the image is repeated several times?
+<<<<<<< HEAD
         
             var thumbnail = document.createElement("img")
             thumbnail.src = data.meals[0]["strMealThumb"]
             var imageEL = document.querySelector("#image-container")
         
              imageEL.appendChild(thumbnail)
+=======
+            // fixed the above by moving it out of the for loop
+            
+>>>>>>> 76d2f4ce7922929b2a481ccb35006202f6eeefce
     
             //nutr info 
             
@@ -109,15 +121,31 @@ fetch(apiUrl)
         })
         .then(function(data){
             if(data.error) {
-                // later on - have a modal or change the nutrition div to display error
+                // Error Handling
                 console.log("Nutrition information is not available")
+                var errorEl = document.querySelector("#nutriError")
+                errorEl.classList.remove("hidden")
                 return
             }
             else{
                 // adding nutrition info
-                var cals = data.calories
+                var cals = Math.ceil(data.calories)
+                var fat = Math.ceil(data.totalNutrients.FAT.quantity) + data.totalNutrients.FAT.unit
+                var carbs = Math.ceil(data.totalNutrients.CHOCDF.quantity) + data.totalNutrients.CHOCDF.unit
+                var cholest = Math.ceil(data.totalNutrients.CHOLE.quantity) + data.totalNutrients.CHOLE.unit
+                var sugar = Math.ceil(data.totalNutrients.SUGAR.quantity) + data.totalNutrients.SUGAR.unit
+
                 var caloriesEl = document.querySelector(".calories")
-                caloriesEl.innerHTML = cals
+                var fatEl = document.querySelector(".fat")
+                var carbsEl = document.querySelector(".carbs")
+                var cholestEl = document.querySelector(".cholesterol")
+                var sugarEl = document.querySelector(".sugar")
+
+                caloriesEl.innerHTML = "Calories: " + cals
+                fatEl.innerHTML = "Fat: " + fat
+                carbsEl.innerHTML = "Carbs: " + carbs
+                cholestEl.innerHTML = "Cholesterol: " + cholest
+                sugarEl.innerHTML = "Sugar: " + sugar
             }
 
                 // add data.calories value to div
