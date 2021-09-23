@@ -25,18 +25,21 @@
         <button id="btn1" class="waves-effect waves-light btn orange accent-4">Yes</button>
         <button id="btn2" class="waves-effect waves-light btn orange accent-4">No</button>
         <p id="kitchen" class="hidden">If you can't take the heat get out of the kitchen!</p>
+      </div>
 
-  </div>
-<section id="recipeContainer" class="hidden">
+      <section id="recipeContainer" class="hidden">
 <h2 id="recipe-title"></h2>
 <ul id="ingList"> </ul>
 <p id="instructions"></p>
 <div id="image-container"></div>
+<button id="save">Save Link to Recipe</button>
 </section>
 
-<section class="noResponse hidden">
+<section id="link" class="hidden"></section>
+
+<section id="nutrition-info" class="noResponse hidden">
   
-<section id="nutrition-info" class="table">
+<section class="table">
 <table class="centered striped">
   <thead>
    <tr id="t-head">
@@ -84,9 +87,12 @@
         </div>
       </div>
     </div>
-  </div>    
+  </div>
+  
+  <div class="saved-recipes" id="saved-link">TEST TEST
+  </div>
       <footer class="page-footer z-depth-4">
-        <div class="container">
+        <div class="container left-align">
           <div class="row">
             <div class="col 16 s12">
                <h5 class="fancy">El Buen Sabor</h5>

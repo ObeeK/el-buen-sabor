@@ -6,6 +6,9 @@ var noButtonEl = document.querySelector("#btn2")
 var recipeEl = document.querySelector("#recipeContainer")
 var nutriEl = document.querySelector("#nutrition-info")
 var question= document.querySelector("#question")
+var saveBtn = document.querySelector("#save")
+var linkEl = document.querySelector("#link")
+var savedEl = document.querySelector("#saved-link")
     //event listener for yes button button
         yesButtonEl.addEventListener("click", function(event) {
             event.preventDefault()
@@ -14,7 +17,8 @@ var question= document.querySelector("#question")
             question.classList.add('hidden')
             recipeEl.classList.remove('hidden')
             nutriEl.classList.remove('hidden')
-
+            kitchen.innerHTML=""
+            
             // qContainer = classList.add('hidden')
            
 
@@ -30,7 +34,9 @@ var question= document.querySelector("#question")
     }
 );
 
-
+saveBtn.addEventListener("click", function(event) {
+    saveLink()
+})
 
 // OR ************
 // just have a question & button asking if they feel like cooking today
@@ -54,7 +60,10 @@ fetch(apiUrl)
         var thumbnail = document.createElement("img")
             thumbnail.src = data.meals[0]["strMealThumb"]
             var imageEL = document.querySelector("#image-container")
-        
+            var recipeLink = data.meals[0].strSource
+            linkEl.textContent= recipeLink
+
+
             imageEL.appendChild(thumbnail)
         for (var i = 1; i < 20; i++) {
             var ingredientList = "strIngredient" + i 
@@ -99,14 +108,23 @@ fetch(apiUrl)
     
             //nutr info 
             
-            //local storage savings
+            
         }
-           
+
+
+        
         
         // console.log(measuredIngredients)
         nutrition(measuredIngredients)
+        
     });
     
+// saving to local storage 
+
+var saveLink = function() {
+    localStorage.setItem('link', linkEl.textContent)
+  };
+
 
     var nutrition = function(measuredIngredients) {
         // console.log({measuredIngredients});
@@ -160,7 +178,14 @@ fetch(apiUrl)
                 // divide each value by the value of yield
             console.log({data})
         })
-
-       
-        
     }
+var loadLink = function () {
+    var localLink = localStorage.getItem('link')
+    var savedLinkEl = document.createElement("p")
+    savedLinkEl.innerText = localLink
+    // savedLinkEl.innerHTML = `asdfasdf <a> <link href='${localLink}'> Saved Recipe </a>`
+    savedEl.appendChild(savedLinkEl)
+    
+}
+
+loadLink()
