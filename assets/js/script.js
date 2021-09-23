@@ -7,6 +7,8 @@ var recipeEl = document.querySelector("#recipeContainer")
 var nutriEl = document.querySelector("#nutrition-info")
 var question= document.querySelector("#question")
 var saveBtn = document.querySelector("#save")
+var linkEl = document.querySelector("#link")
+var savedEl = document.querySelector("#saved-link")
     //event listener for yes button button
         yesButtonEl.addEventListener("click", function(event) {
             event.preventDefault()
@@ -16,6 +18,7 @@ var saveBtn = document.querySelector("#save")
             recipeEl.classList.remove('hidden')
             nutriEl.classList.remove('hidden')
             kitchen.innerHTML=""
+            
             // qContainer = classList.add('hidden')
            
 
@@ -31,8 +34,8 @@ var saveBtn = document.querySelector("#save")
     }
 );
 
-saveBtn.addEventListener("click", function(saveLink) {
-
+saveBtn.addEventListener("click", function(event) {
+    saveLink()
 })
 
 // OR ************
@@ -57,7 +60,10 @@ fetch(apiUrl)
         var thumbnail = document.createElement("img")
             thumbnail.src = data.meals[0]["strMealThumb"]
             var imageEL = document.querySelector("#image-container")
-            var recipeLink = meals[0].strSource
+            var recipeLink = data.meals[0].strSource
+            linkEl.textContent= recipeLink
+
+
             imageEL.appendChild(thumbnail)
         for (var i = 1; i < 20; i++) {
             var ingredientList = "strIngredient" + i 
@@ -104,6 +110,8 @@ fetch(apiUrl)
             
             
         }
+
+
         
         
         // console.log(measuredIngredients)
@@ -114,8 +122,7 @@ fetch(apiUrl)
 // saving to local storage 
 
 var saveLink = function() {
-    localStorage.setItem('link', JSON.stringify(recipeLink))
-    console.log("testing")
+    localStorage.setItem('link', linkEl.textContent)
   };
 
 
@@ -171,7 +178,13 @@ var saveLink = function() {
                 // divide each value by the value of yield
             console.log({data})
         })
-
-       
-        
     }
+var loadLink = function () {
+    var localLink = localStorage.getItem('link')
+    var savedLinkEl = document.createElement("p")
+    savedLinkEl.innerHTML = `asdfasdf <a> <link href='${localLink}'> Saved Recipe </a>`
+    savedEl.appendChild(savedLinkEl)
+    
+}
+
+loadLink()
