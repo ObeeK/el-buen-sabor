@@ -4,7 +4,7 @@ var nutritionUrl = "https://api.edamam.com/api/nutrition-details?app_id=e23b29e2
 var yesButtonEl = document.querySelector("#btn1")
 var noButtonEl = document.querySelector("#btn2")
 var recipeEl = document.querySelector("#recipeContainer")
-var nutriEl = document.querySelector("#nutrition")
+var nutriEl = document.querySelector("#nutrition-info")
 var question= document.querySelector("#question")
     //event listener for yes button button
         yesButtonEl.addEventListener("click", function(event) {
