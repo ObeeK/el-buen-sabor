@@ -6,6 +6,7 @@ var noButtonEl = document.querySelector("#btn2")
 var recipeEl = document.querySelector("#recipeContainer")
 var nutriEl = document.querySelector("#nutrition-info")
 var question= document.querySelector("#question")
+var saveBtn = document.querySelector("#save")
     //event listener for yes button button
         yesButtonEl.addEventListener("click", function(event) {
             event.preventDefault()
@@ -30,7 +31,9 @@ var question= document.querySelector("#question")
     }
 );
 
+saveBtn.addEventListener("click", function(saveLink) {
 
+})
 
 // OR ************
 // just have a question & button asking if they feel like cooking today
@@ -54,7 +57,7 @@ fetch(apiUrl)
         var thumbnail = document.createElement("img")
             thumbnail.src = data.meals[0]["strMealThumb"]
             var imageEL = document.querySelector("#image-container")
-        
+            var recipeLink = meals[0].strSource
             imageEL.appendChild(thumbnail)
         for (var i = 1; i < 20; i++) {
             var ingredientList = "strIngredient" + i 
@@ -99,14 +102,22 @@ fetch(apiUrl)
     
             //nutr info 
             
-            //local storage savings
+            
         }
-           
+        
         
         // console.log(measuredIngredients)
         nutrition(measuredIngredients)
+        
     });
     
+// saving to local storage 
+
+var saveLink = function() {
+    localStorage.setItem('link', JSON.stringify(recipeLink))
+    console.log("testing")
+  };
+
 
     var nutrition = function(measuredIngredients) {
         // console.log({measuredIngredients});
