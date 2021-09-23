@@ -55,9 +55,6 @@ fetch(apiUrl)
                 // console.log(totalIngredient)
 
                 // create li element with each ingredient
-<<<<<<< HEAD
-                
-=======
                 currentIngredient = document.createElement("li");
 
                 currentIngredient.innerHTML=totalIngredient
@@ -66,7 +63,6 @@ fetch(apiUrl)
 
                 ingT.appendChild(currentIngredient);
 
->>>>>>> feature/buttons
                 measuredIngredients.push(totalIngredient);
                 // console.log(measuredIngredients);
                 
