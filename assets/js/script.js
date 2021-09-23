@@ -183,7 +183,6 @@ var loadLink = function () {
     var localLink = localStorage.getItem('link')
     var savedLinkEl = document.createElement("p")
     savedLinkEl.innerText = localLink
-    // savedLinkEl.innerHTML = `asdfasdf <a> <link href='${localLink}'> Saved Recipe </a>`
     savedEl.appendChild(savedLinkEl)
     
 }
