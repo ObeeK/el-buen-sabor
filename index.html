@@ -23,104 +23,108 @@
   </section>
   <!--Hidden Box-->
   <div class="container">
-  <div class="row questionRow">
-    <div class="col s2">
+    <div class="row questionRow">
+      <div class="col s2">
+      </div>
+      <div id="qContainer" class="center-align col s8">
+        <h3 id="question"> Do you feel like cooking today? </h3>
+        <button id="btn1" class="waves-effect waves-light btn orange accent-4">Yes</button>
+        <button id="btn2" class="waves-effect waves-light btn orange accent-4">No</button>
+        <p id="kitchen" class="hidden">If you can't take the heat get out of the kitchen!</p>
+      </div>
+      <div class="col s2">
+      </div>
     </div>
-    <div id="qContainer" class="center-align col s8">
-      <h3 id="question"> Do you feel like cooking today? </h3>
-      <button id="btn1" class="waves-effect waves-light btn orange accent-4">Yes</button>
-      <button id="btn2" class="waves-effect waves-light btn orange accent-4">No</button>
-      <p id="kitchen" class="hidden">If you can't take the heat get out of the kitchen!</p>
-    </div>
-    <div class="col s2">
-    </div>
-  </div>
   </div>
 
 
   <div class="container">
-  <section id="recipeContainer" class="hidden">
-    <div class="row">
-      <div class="col s6">
-        <div id="image-container"></div>
-      </div>
-      <h2 class="col s4" id="recipe-title"></h2>
+    <section id="recipeContainer" class="hidden">
       <div class="row">
         <div class="col s6">
-          <h5>What You'll Need:</h3>
-            <ul id="ingList"> </ul>
+          <div id="image-container"></div>
         </div>
-        <!-- <div class="col s1"></div> -->
-        <div class="col s12">
-          <p id="instructions"></p>
+        <h2 class="col s4" id="recipe-title"></h2>
+        <div class="row">
+          <div class="col s6">
+            <h5>What You'll Need:</h3>
+              <ul id="ingList"> </ul>
+          </div>
+          <!-- <div class="col s1"></div> -->
+          <div class="col s12">
+            <p id="instructions"></p>
+          </div>
+          <!-- <div class="col s1"></div> -->
         </div>
-        <!-- <div class="col s1"></div> -->
       </div>
-    </div>
-  </section>
-</div>
+    </section>
+  </div>
 
-<div class="container">
-  <div class="row">
-    <div id="nutrition-info" class="col s6 hidden">
-      <table class="striped">
-        <thead>
-          <tr id="t-head">
-            <th>Total Nutrients for Dish</th>
-            <th>Value</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr id="row-1">
-            <td>Calories</td>
-            <td id="calories">Not Available</td>
-          </tr>
-          <tr id="row-2">
-            <td>Fat</td>
-            <td id="fat">Not Available</td>
-          </tr>
-          <tr id="row-3">
-            <td>Carbs</td>
-            <td id="carbs">Not Available</td>
-          </tr>
-          <tr id="row-4">
-            <td>Cholesterol</td>
-            <td id="cholesterol">Not Available</td>
-          </tr>
-          <tr id="row-5">
-            <td>Sugar</td>
-            <td id="sugar">Not Available</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="col s6">
+  <div class="container">
     <div class="row">
-      <section id="saveButtonLink">
-        <div id="saveButton1" class="hidden">
-          <button id="save" class="waves-effect waves-light btn orange accent-4">Save Link to Recipe</button>
-        </div>
-        </section>
-    </div>
-    <div class="row">
-      <div class=""> Previously saved recipe:
-        <div class="saved-recipes" id="saved-link"></div>
+      <div id="nutrition-info" class="col s6 hidden">
+        <table class="striped">
+          <thead>
+            <tr id="t-head">
+              <th>Total Nutrients for Dish</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="row-1">
+              <td>Calories</td>
+              <td id="calories">Not Available</td>
+            </tr>
+            <tr id="row-2">
+              <td>Fat</td>
+              <td id="fat">Not Available</td>
+            </tr>
+            <tr id="row-3">
+              <td>Carbs</td>
+              <td id="carbs">Not Available</td>
+            </tr>
+            <tr id="row-4">
+              <td>Cholesterol</td>
+              <td id="cholesterol">Not Available</td>
+            </tr>
+            <tr id="row-5">
+              <td>Sugar</td>
+              <td id="sugar">Not Available</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+      <div id="column1" class="col s3"></div>
+      <div id="linkColumn" class="col s6 center-align">
+        <div class="row">
+          <section id="saveButtonLink">
+            <div id="saveButton1" class="hidden">
+              <button id="save" class="waves-effect waves-light btn orange accent-4">Save Link to Recipe</button>
+            </div>
+          </section>
+        </div>
+        <div class="row">
+          <div class=""> Previously saved recipe:
+            <div class="saved-recipes" id="saved-link"></div>
+          </div>
+        </div>
+      </div>
+      <div id="column3" class="col s3"></div>
     </div>
-    </div></div></div>
-  </section> 
-</div>
+  </div>
+  </section>
+  </div>
 
   <section id="link" class="hidden"></section>
 
   <section id="nutrition-info" class="noResponse hidden">
 
-<!-- <div class="container">
+    <!-- <div class="container">
     <section class="table">
       <div class="row">
         <div class="col s2"></div>
         <div class="col s8"> -->
-          <!-- <table class="striped">
+    <!-- <table class="striped">
             <thead>
               <tr id="t-head">
                 <th>Total Nutrients for Dish</th>
@@ -150,13 +154,13 @@
               </tr>
             </tbody>
           </table> -->
-        <!-- </div>
+    <!-- </div>
         <div class="col s2"></div>
       </div>
     </section>
   </section>
 </div> -->
-  <!--Image Cards
+    <!--Image Cards
   <div class="row">
     <div class="col s12 m7">
       <div class="card">
@@ -174,11 +178,12 @@
     </div>
   </div> -->
 
-  <section id="savedRecipes">
-    <div class="row">
+    <section id="savedRecipes">
+      <div class="row">
 
-    </div>
+      </div>
 
+    </section>
   </section>
   <footer class="page-footer z-depth-4">
     <div class="container left-align">

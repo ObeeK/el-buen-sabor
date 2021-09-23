@@ -11,7 +11,7 @@
 .table {
     box-sizing: border-box;
     border: solid black 3px;
-    width: 60%;
+    width: 100%;
 }
 .flex {
     align-items: left;

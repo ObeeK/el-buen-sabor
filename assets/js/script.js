@@ -10,6 +10,7 @@ var saveBtn = document.querySelector("#save")
 var linkEl = document.querySelector("#link")
 var savedEl = document.querySelector("#saved-link")
 var saveButtonEl = document.querySelector("#saveButton1")
+var linkColumnEl = document.querySelector("#linkColumn")
     //event listener for yes button button
         yesButtonEl.addEventListener("click", function(event) {
             event.preventDefault()
@@ -19,6 +20,7 @@ var saveButtonEl = document.querySelector("#saveButton1")
             recipeEl.classList.remove('hidden')
             nutriEl.classList.remove('hidden')
             saveButtonEl.classList.remove('hidden')
+            linkColumnEl.classList.add('clickedColumn')
             kitchen.innerHTML=""
             
             // qContainer = classList.add('hidden')
