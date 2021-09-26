@@ -3,7 +3,9 @@ API #1: https://www.themealdb.com/api.php
 
 API #2: https://developer.edamam.com/edamam-nutrition-api-demo
 
+
 Live App: https://obeek.github.io/el-buen-sabor/
+
 
 ## Team Name
 Fuzzy Wuzzys
@@ -15,6 +17,5 @@ El Buen Sabor
 Recipe app for finding and collecting recipes.
 
 ## Visuals
-<img src="assets/images/Site visuals/Screen Shot 2021-09-17 at 3.10.20 AM.png" alt="Site visuals">
-<img src="assets/images/Site visuals/Screen Shot 2021-09-17 at 3.10.36 AM.png" alt="Site visuals">
-<img src="assets/images/Site visuals/Screen Shot 2021-09-17 at 3.10.46 AM.png" alt="Site visuals">
+<img width="1280" alt="Screen Shot 2021-09-26 at 11 40 35 AM" src="https://user-images.githubusercontent.com/86803279/134816394-00eb0652-b44b-48d7-a3d3-0bc9d3030916.png">
+
