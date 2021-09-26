@@ -3,7 +3,9 @@ API #1: https://www.themealdb.com/api.php
 
 API #2: https://developer.edamam.com/edamam-nutrition-api-demo
 
-Live Application LINK: https://obeek.github.io/el-buen-sabor/
+
+Live App: https://obeek.github.io/el-buen-sabor/
+
 
 ## Team Name
 Fuzzy Wuzzys
